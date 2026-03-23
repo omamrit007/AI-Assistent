@@ -1,19 +1,15 @@
-const { app, BrowserWindow, globalShortcut } = require("electron");
+import { app, BrowserWindow } from "electron";
 
 let win;
 
 app.whenReady().then(() => {
   win = new BrowserWindow({
-    width: 400,
-    height: 600,
+    width: 350,
+    height: 500,
     alwaysOnTop: true,
-    transparent: true,
     frame: false,
+    transparent: true,
   });
 
-  win.loadURL("http://localhost:3000");
-
-  globalShortcut.register("CommandOrControl+Space", () => {
-    win.isVisible() ? win.hide() : win.show();
-  });
+  win.loadURL("http://localhost:5173");
 });

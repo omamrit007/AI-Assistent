@@ -1,14 +1,17 @@
-import React from "react";
-
 export default function Overlay({ answer }) {
   return (
     <div style={{
-      background: "rgba(0,0,0,0.7)",
+      position: "fixed",
+      top: "20px",
+      right: "20px",
+      width: "300px",
+      background: "rgba(0,0,0,0.8)",
       color: "white",
-      padding: "10px",
-      borderRadius: "10px"
+      padding: "15px",
+      borderRadius: "12px",
+      zIndex: 9999
     }}>
-      {answer || "Listening... 🎧"}
+      {answer || "🎧 Listening..."}
     </div>
   );
 }

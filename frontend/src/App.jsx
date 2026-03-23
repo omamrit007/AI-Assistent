@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Overlay from "./components/Overlay";
 import { startListening } from "./hooks/useAudio";
 import { sendText } from "./services/api";
